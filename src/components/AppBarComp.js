@@ -1,9 +1,10 @@
-import { AppBar, Avatar, Button, Chip, Menu, Typography } from "@mui/material";
 import { React, useState, useEffect } from "react";
+import { AppBar, Avatar, Button, Chip, Menu, Typography } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 const drawerWidth = 680;
 
 function AppBarComp() {
+  
   const location = useLocation();
   const [selectedUserData, setSelectedUserData] = useState({});
 
@@ -48,7 +49,6 @@ function AppBarComp() {
   return (
     <AppBar
       sx={{
-        display: "block",
         bgcolor: "transparent",
         width: `calc(100% - ${drawerWidth}px)`,
         mt: 7,
