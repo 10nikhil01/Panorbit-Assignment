@@ -12,16 +12,14 @@ import {
   ListItemButton,
   TextField,
   Typography,
-  IconButton,
-  Input,
-  Divider,
+  IconButton
 } from "@mui/material";
 import { React, useState, useEffect } from "react";
 import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import CloseIcon from "@mui/icons-material/Close";
-import SendIcon from '@mui/icons-material/Send';
+import SendIcon from "@mui/icons-material/Send";
 
 function FooterComp() {
   const [users, setUsers] = useState([]);
@@ -134,25 +132,46 @@ function FooterComp() {
             bottom: "1rem",
             right: "26rem",
             boxShadow: "none",
-            borderRadius:"10px 10px 0 0"
+            borderRadius: "10px 10px 0 0",
           },
         }}
       >
-        <DialogTitle sx={{bgcolor:"#1976D2",px:2, borderRadius:"10px 10px 0 0", display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-         <Box sx={{display:"flex"}}> <Avatar sx={{width:25, height:25, mr:1}} src={selectedUser && selectedUser.profilepicture} />{" "}
-          <Typography sx={{color:"#fff", fontSize:".9rem"}}> {selectedUser && selectedUser.name} </Typography>
+        <DialogTitle
+          sx={{
+            bgcolor: "#1976D2",
+            px: 2,
+            borderRadius: "10px 10px 0 0",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Box sx={{ display: "flex" }}>
+            {" "}
+            <Avatar
+              sx={{ width: 25, height: 25, mr: 1 }}
+              src={selectedUser && selectedUser.profilepicture}
+            />{" "}
+            <Typography sx={{ color: "#fff", fontSize: ".9rem" }}>
+              {" "}
+              {selectedUser && selectedUser.name}{" "}
+            </Typography>
           </Box>
           <Box>
-            <IconButton  onClick={handleClose} sx={{p: "4px"}}>
-          <KeyboardArrowDownIcon sx={{color:"#fff",}} />
-          </IconButton>
-          <IconButton aria-label="close"sx={{p:"4px"}} onClick={handleClose}>
-            <CloseIcon sx={{color:"#fff"}} />
-          </IconButton>
+            <IconButton onClick={handleClose} sx={{ p: "4px" }}>
+              <KeyboardArrowDownIcon sx={{ color: "#fff" }} />
+            </IconButton>
+            <IconButton
+              aria-label="close"
+              sx={{ p: "4px" }}
+              onClick={handleClose}
+            >
+              <CloseIcon sx={{ color: "#fff" }} />
+            </IconButton>
           </Box>
         </DialogTitle>
-        <DialogContent sx={{ px:0, pb:0}}>
-          <List sx={{border:"1px solid #1976d2"}}>
+        <DialogContent sx={{ px: 0, pb: 0 }}>
+          <List sx={{ border: "1px solid #1976d2" }}>
             {messages.map((msg, index) => (
               <ListItem key={index}>
                 <ListItemText
@@ -163,19 +182,21 @@ function FooterComp() {
               </ListItem>
             ))}
           </List>
-          <Box sx={{display:"flex", border:"1px solid #e5e5e5", p:0}}>
-          <TextField variant="standard" size="small"
-          InputProps={{
-            disableUnderline: true
-          }}
-          sx={{pl:1}}
-            fullWidth
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <IconButton onClick={handleSend} sx={{px:2}}>
-            <SendIcon sx={{color:"#1976D2"}} />
-          </IconButton>
+          <Box sx={{ display: "flex", border: "1px solid #e5e5e5", p: 0 }}>
+            <TextField
+              variant="standard"
+              size="small"
+              InputProps={{
+                disableUnderline: true,
+              }}
+              sx={{ pl: 1 }}
+              fullWidth
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <IconButton onClick={handleSend} sx={{ px: 2 }}>
+              <SendIcon sx={{ color: "#1976D2" }} />
+            </IconButton>
           </Box>
         </DialogContent>
       </Dialog>
