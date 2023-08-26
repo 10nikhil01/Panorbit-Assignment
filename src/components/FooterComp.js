@@ -66,7 +66,7 @@ function FooterComp() {
     }
   };
   return (
-    <Box sx={{ position: "fixed", bottom: "1rem", right: "10rem" }}>
+    <Box sx={{ position: "fixed", bottom: "1rem", right: "11rem" }}>
       <Button
         onClick={handleButtonClick}
         startIcon={<ModeCommentOutlinedIcon style={{ fontSize: "1.8rem" }} />}
