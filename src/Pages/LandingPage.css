@@ -1,0 +1,10 @@
+.landingPage
+{
+    background-image: url("../Assets/wave.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
