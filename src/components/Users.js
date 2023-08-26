@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 function Users() {
   const [users, setUsers] = useState([]);
 
-
   useEffect(() => {
     fetch(`https://panorbit.in/api/users.json`)
       .then((response) => response.json())
@@ -29,7 +28,7 @@ function Users() {
   const Navigate = useNavigate();
   function handleUsersClick(user) {
     console.log(user);
-    localStorage.setItem('selectedUserData', JSON.stringify(user));
+    localStorage.setItem("selectedUserData", JSON.stringify(user));
     Navigate("./profilePage");
   }
 
