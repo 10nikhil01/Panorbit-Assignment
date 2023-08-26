@@ -143,7 +143,7 @@ function FooterComp() {
           <Typography sx={{color:"#fff", fontSize:".9rem"}}> {selectedUser && selectedUser.name} </Typography>
           </Box>
           <Box>
-            <IconButton sx={{p: "4px"}}>
+            <IconButton  onClick={handleClose} sx={{p: "4px"}}>
           <KeyboardArrowDownIcon sx={{color:"#fff",}} />
           </IconButton>
           <IconButton aria-label="close"sx={{p:"4px"}} onClick={handleClose}>
