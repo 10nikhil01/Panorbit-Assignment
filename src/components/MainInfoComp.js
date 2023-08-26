@@ -13,8 +13,7 @@ function MainInfoComp() {
   }, []);
   return (
    <Box sx={{}}>
-   <Typography>Main Component</Typography>
-   <Grid container  sx={{width:`calc(100% - ${width})`,ml:16}}>
+   <Grid container  sx={{width:`calc(100% - ${width})`,ml:16, mt:20}}>
     <Grid item md={5} sx={{borderRight:"1px solid #e5e5e5", pr:10}}>
       <Box sx={{}}>
         <Avatar sx={{width:200, height:200, ml:10}} src={loggedInUser.profilepicture} />
